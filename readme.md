@@ -1,5 +1,7 @@
 # MySQL8使用docker-compose搭建一主多从
 
+> 网上较多教程都是MySQL8.0.23之前的，8.0.23之后命令发生了一些比较大的修改，不再兼容以前的命令，我也是走了一些弯路，所以记录了此搭建过程。
+
 1. 克隆本项目，然后使用docker-compose启动本项目
     ```shell
     docker compose up -d
@@ -52,7 +54,6 @@
 
     [15.4.2.1 CHANGE MASTER TO Statement](https://dev.mysql.com/doc/refman/8.0/en/change-master-to.html)
 
-- 网上较多教程都是MySQL8.0.23之前的， 我也是走了一些弯路，所以记录了此搭建过程。
 - 如果需要多个Slave节点可以以此类推，注意复制mysql-slave文件夹之后需要修改`./conf/my.cnf`中的server_id为一个新的id
 
 ### 参考
